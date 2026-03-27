@@ -35,7 +35,7 @@ Sub-Agents Directory is a curated collection of **100+ sub-agent prompts** and *
 
 ```bash
 # Clone the repository
-git clone https://github.com/ayush-that/sub-agents.directory.git
+git clone https://github.com/ashwani1122/claude-sub-agent.git
 cd sub-agents.directory
 
 # Install dependencies
