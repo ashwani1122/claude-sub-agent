@@ -87,7 +87,7 @@ export function Header() {
           </DropdownMenu>
 
           <Link
-            href="https://github.com/ayush-that/sub-agents.directory"
+            href="https://github.com/ashwani1122/claude-sub-agent"
             target="_blank"
             rel="noopener noreferrer"
             className="text-[#878787] hover:text-primary transition-colors"

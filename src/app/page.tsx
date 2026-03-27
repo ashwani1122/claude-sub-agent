@@ -19,20 +19,7 @@ export default function Page() {
       <div className="min-h-screen w-full px-4 pt-[10%]">
         <div className="w-full max-w-6xl mx-auto">
           <h1 className="sr-only">Sub-Agents Directory - Find Claude Code Sub-Agent Prompts</h1>
-          <div className="flex justify-center mb-6">
-            <a
-              href="https://peerlist.io/shydev69/project/subagentsdirectory"
-              target="_blank"
-              rel="noreferrer"
-            >
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="https://peerlist.io/api/v1/projects/embed/PRJHOK89D8AEPQBK9IGAPBA8BEMPDO?showUpvote=false&theme=dark"
-                alt="sub-agents.directory"
-                className="h-[72px] w-auto"
-              />
-            </a>
-          </div>
+         
           <GlobalSearch />
         </div>
       </div>
