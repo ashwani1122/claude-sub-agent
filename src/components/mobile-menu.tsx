@@ -1,0 +1,131 @@
+"use client";
+
+import { cn } from "@/lib/utils";
+import { createClient } from "@/utils/supabase/client";
+import { AnimatePresence, motion } from "framer-motion";
+import { Menu, X } from "lucide-react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
+import { Button } from "./ui/button";
+
+interface Session {
+  user?: {
+    name?: string;
+    email?: string;
+    image?: string;
+  };
+}
+
+const navigationLinks = [
+  { href: "/agents", label: "Agents" },
+  { href: "/mcp", label: "MCPs" },
+  { href: "/generate", label: "Generate" },
+  { href: "/learn", label: "Learn" },
+  { href: "/about", label: "About" },
+  { href: "/advertise", label: "Advertise" },
+] as const;
+
+export function MobileMenu() {
+  const pathname = usePathname();
+  const [isOpen, setIsOpen] = useState(false);
+  const [session, setSession] = useState<Session | null>(null);
+  const supabase = createClient();
+
+  useEffect(() => {
+    supabase.auth.getSession().then(({ data }) => {
+      setSession(data.session);
+    });
+  }, [supabase.auth]);
+
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, [isOpen]);
+
+  return (
+    <>
+      <div className="md:hidden mr-4">
+        <Button variant="ghost" className="p-0 w-8 h-8" onClick={() => setIsOpen(!isOpen)}>
+          {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+        </Button>
+      </div>
+
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.1 }}
+            className="fixed inset-0 z-[99999] bg-background w-screen h-screen top-[50px] bottom-0 p-4"
+          >
+            <div className="flex flex-col">
+              {navigationLinks.map((link, index) => (
+                <motion.div
+                  key={link.href}
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{
+                    delay: navigationLinks.length * 0.02 + index * 0.02,
+                    duration: 0.1,
+                  }}
+                >
+                  <Link
+                    href={link.href}
+                    onClick={() => setIsOpen(false)}
+                    className={cn(
+                      "block py-5 text-sm font-medium",
+                      pathname === link.href ? "text-primary" : "text-[#878787]",
+                    )}
+                  >
+                    {link.label}
+                  </Link>
+                </motion.div>
+              ))}
+
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                className="mt-12"
+                transition={{
+                  delay: navigationLinks.length * 0.02 + 0.05,
+                  duration: 0.1,
+                }}
+              >
+                {session ? (
+                  <Button
+                    variant="outline"
+                    className="bg-white text-black h-8 rounded-full w-full"
+                    onClick={() => {
+                      supabase.auth.signOut();
+                      setSession(null);
+                      setIsOpen(false);
+                    }}
+                  >
+                    Sign Out
+                  </Button>
+                ) : (
+                  <Link href={`/login?next=${pathname}`} onClick={() => setIsOpen(false)}>
+                    <Button
+                      variant="outline"
+                      className="bg-white text-black h-8 rounded-full w-full"
+                    >
+                      Sign In
+                    </Button>
+                  </Link>
+                )}
+              </motion.div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </>
+  );
+}
