@@ -1,7 +1,4 @@
 <p align="center">
-  <a href="https://peerlist.io/shydev69/project/subagentsdirectory" target="_blank">
-    <img src="public/cover-image.png" alt="Sub-Agents Directory" height="400" />
-  </a>
 </p>
 
 <h1 align="center">Sub-Agents Directory</h1>
