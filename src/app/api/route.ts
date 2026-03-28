@@ -1,3 +1,4 @@
+export const runtime = "nodejs";
 import { rules } from "@/data/rules";
 import { NextResponse } from "next/server";
 

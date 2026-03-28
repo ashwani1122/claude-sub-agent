@@ -1,3 +1,4 @@
+export const runtime = "nodejs";
 import { rules } from "@/data/rules";
 
 export const dynamic = "force-static";
