@@ -6,9 +6,13 @@ import { streamText } from "ai";
 
 export async function POST(req: Request) {
   const supabase = await createClient();
+
+  console.log(supabase);
   const {
     data: { user },
   } = await supabase.auth.getUser();
+
+  console.log(user)
 
   if (!user) {
     return new Response("Unauthorized", { status: 401 });

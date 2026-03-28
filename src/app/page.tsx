@@ -19,7 +19,7 @@ export default function Page() {
       <div className="min-h-screen w-full px-4 pt-[10%]">
         <div className="w-full max-w-6xl mx-auto">
           <h1 className="sr-only">Sub-Agents Directory - Find Claude Code Sub-Agent Prompts</h1>
-         
+
           <GlobalSearch />
         </div>
       </div>

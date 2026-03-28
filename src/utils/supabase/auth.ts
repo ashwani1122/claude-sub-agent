@@ -7,4 +7,3 @@ export async function getSession() {
   } = await supabase.auth.getSession();
   return session;
 }
- 

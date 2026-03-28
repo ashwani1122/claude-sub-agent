@@ -8,9 +8,7 @@ export async function GET(request: Request) {
     const next = searchParams.get("next") ?? "/";
 
     if (!code) {
-      return NextResponse.redirect(
-        `${origin}/auth/auth-code-error?error=no_code_in_url`
-      );
+      return NextResponse.redirect(`${origin}/auth/auth-code-error?error=no_code_in_url`);
     }
 
     const supabase = await createClient();
@@ -18,7 +16,7 @@ export async function GET(request: Request) {
 
     if (error) {
       return NextResponse.redirect(
-        `${origin}/auth/auth-code-error?error=${encodeURIComponent(error.message)}`
+        `${origin}/auth/auth-code-error?error=${encodeURIComponent(error.message)}`,
       );
     }
 
@@ -29,14 +27,12 @@ export async function GET(request: Request) {
       return NextResponse.redirect(`${origin}${next}`);
     }
 
-    return NextResponse.redirect(
-      `${origin}/auth/auth-code-error?error=no_user`
-    );
+    return NextResponse.redirect(`${origin}/auth/auth-code-error?error=no_user`);
   } catch (err: any) {
     console.error("CALLBACK ERROR:", err);
 
     return NextResponse.redirect(
-      `/auth/auth-code-error?error=${encodeURIComponent(err.message || "unknown")}`
+      `/auth/auth-code-error?error=${encodeURIComponent(err.message || "unknown")}`,
     );
   }
 }
