@@ -36,7 +36,7 @@ export function Header() {
     <div className="flex justify-between items-center">
       <div className="md:fixed z-50 flex justify-between items-center top-0 px-6 py-2 w-full bg-background/95 backdrop-blur-md">
         <Link href="/" className="font-medium font-fraunces text-base">
-          sub-agents.directory
+          claude-sub-agents.directory
         </Link>
 
         <div className="hidden md:flex items-center gap-5">

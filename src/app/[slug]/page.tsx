@@ -6,7 +6,7 @@ import { getRelatedRules, getRuleBySlug, getSections, rules } from "@/data/rules
 import { cleanDescription } from "@/lib/utils";
 import type { Metadata } from "next";
 
-const BASE_URL = "https://sub-agents.directory";
+const BASE_URL = "http://localhost:3000";
 
 type Params = Promise<{ slug: string }>;
 
