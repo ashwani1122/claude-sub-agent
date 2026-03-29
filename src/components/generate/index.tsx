@@ -84,7 +84,7 @@ export function Generate() {
   const hasResult = result.length > 0;
 
   return (
-    <div className="min-h-[calc(100vh-200px)] flex flex-col items-center justify-center px-4">
+    <div className="min-h-[calc(100vh-100px)] flex flex-col items-center justify-center px-4">
       <div
         className={cn(
           "w-full max-w-2xl transition-all duration-500",

@@ -4,7 +4,7 @@ const openrouter = createOpenRouter({
   apiKey: process.env.OPENROUTER_API_KEY,
 });
 
-export const getModel = () => openrouter("qwen/qwen3-coder:free");
+export const getModel = () => openrouter("nvidia/nemotron-3-super-120b-a12b:free");
 
 export const SYSTEM_PROMPT = `You generate Claude Code sub-agent prompts. Output ONLY the prompt itself - no introductions, explanations, or conclusions.
 
