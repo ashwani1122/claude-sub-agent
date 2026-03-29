@@ -3,20 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "prisma generate && next build --webpack",
-    "start": "next start",
-    "postinstall": "prisma generate",
-    "typecheck": "tsc --noEmit",
-    "lint": "oxlint",
-    "lint:fix": "oxlint --fix",
-    "format": "oxfmt --write",
-    "format:check": "oxfmt --check",
-    "prepare": "husky"
-  },
+  "dev": "next dev",
+  "build": "prisma generate && next build",
+  "start": "next start",
+  "postinstall": "prisma generate",
+  "typecheck": "tsc --noEmit"
+},
   "dependencies": {
     "@ai-sdk/xai": "^1.1.9",
-    "@opennextjs/cloudflare": "^1.17.1",
     "@openrouter/ai-sdk-provider": "^1.5.4",
     "@polar-sh/nextjs": "^0.9.3",
     "@polar-sh/sdk": "^0.42.1",
