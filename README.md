@@ -42,7 +42,7 @@ bun install
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) to view the directory.
+Open [https://claude-sub-agent1.vercel.app](https://claude-sub-agent1.vercel.app) to view the directory.
 
 ## Contributing
 

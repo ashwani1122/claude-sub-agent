@@ -71,7 +71,7 @@ export function GeneratedResults({ result, input, onNew }: GeneratedResultsProps
       setIsSaving(false);
     }
 
-    const shareUrl = `http://localhost:3000/g/${slug}`;
+    const shareUrl = `https://claude-sub-agent1.vercel.app/g/${slug}`;
     const text = encodeURIComponent(
       "Check out this sub-agent prompt I generated on Sub-Agents Directory!",
     );
@@ -85,7 +85,7 @@ export function GeneratedResults({ result, input, onNew }: GeneratedResultsProps
       return;
     }
     try {
-      await navigator.clipboard.writeText(`http://localhost:3000/g/${savedSlug}`);
+      await navigator.clipboard.writeText(`https://claude-sub-agent1.vercel.app/g/${savedSlug}`);
       toast.success("Link copied to clipboard!");
     } catch {
       toast.error("Failed to copy link");
