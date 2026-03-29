@@ -1,4 +1,4 @@
-export const runtime = "nodejs";
+
 import { ensureUserExists } from "@/actions/user";
 import { getModel, SYSTEM_PROMPT } from "@/lib/ai";
 import { checkRateLimit } from "@/lib/rate-limit";

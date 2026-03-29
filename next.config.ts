@@ -6,9 +6,6 @@ initOpenNextCloudflareForDev();
 
 const nextConfig: NextConfig = {
   skipTrailingSlashRedirect: true,
-   experimental: {
-    runtime: "nodejs",
-  },
   images: {
     remotePatterns: [
       { protocol: "https", hostname: "avatars.githubusercontent.com" },

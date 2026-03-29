@@ -1,7 +1,7 @@
 
 
 
-export const runtime = "nodejs";
+
 import { Checkout } from "@polar-sh/nextjs";
 
 

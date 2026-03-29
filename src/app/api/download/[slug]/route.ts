@@ -1,4 +1,4 @@
-export const runtime = "nodejs";
+
 import { rules } from "@/data/rules";
 import contentMap from "@/data/rules/generated-content.json";
 
