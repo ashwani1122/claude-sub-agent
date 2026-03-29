@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-  "generate": "bun run scripts/generate-rules-json.ts",
+  "generate": "bun scripts/generate-rules-json.ts",
    "dev": "  next dev",
   "build": "bun run generate && prisma generate && next build",
   "start": "next start",
