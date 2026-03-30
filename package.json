@@ -3,12 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+  "dev": "next dev",
   "generate": "bun scripts/generate-rules-json.ts",
-   "dev": "  next dev",
-  "build": "bun run generate && prisma generate && next build",
+  "build": "prisma generate && bun run generate && next build",
   "start": "next start",
   "postinstall": "prisma generate",
-  "typecheck": "tsc --noEmit"
+  "typecheck": "tsc --noEmit",
+  "lint": "oxlint" 
 },
   "dependencies": {
     "@ai-sdk/xai": "^1.1.9",

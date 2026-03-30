@@ -3,7 +3,7 @@ import { rules } from "@/data/rules";
 
 export const dynamic = "force-static";
 
-const BASE_URL = process.env.NEXT_PUBLIC_APP_URL || "https://sub-agents.directory";
+const BASE_URL = process.env.NEXT_PUBLIC_APP_URL || "https://claude-sub-agent.vercel.app";
 const VALID_SLUG_PATTERN = /^[a-z0-9-]+$/;
 
 function sanitizeForBash(str: string): string {
