@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     title: "Generate Sub-Agent Prompts | Sub-Agents Directory",
     description:
       "Generate custom Claude Code sub-agent prompts for your project by uploading your package.json, requirements.txt, or describing your tech stack.",
-    url: "https://claude-sub-agent1.vercel.app/generate",
+    url: "https://claude-sub-agent.vercel.app/generate",
     images: [
       {
         url: "/cover-image.png",

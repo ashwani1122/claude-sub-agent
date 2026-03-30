@@ -42,7 +42,7 @@ bun install
 bun dev
 ```
 
-Open [https://claude-sub-agent1.vercel.app](https://claude-sub-agent1.vercel.app) to view the directory.
+Open [https://claude-sub-agent.vercel.app](https://claude-sub-agent.vercel.app) to view the directory.
 
 ## Contributing
 

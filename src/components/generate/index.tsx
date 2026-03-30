@@ -28,14 +28,14 @@ export function Generate() {
     setError(null);
     setFinished(false);
     setRateLimitReset(null);
-
+    
     try {
       const response = await fetch("/api/generate", {
-        method: "POST",
+        method: "POST",  
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ input }),
       });
-
+    console.log(response)
       if (!response.ok) {
         if (response.status === 401) {
           throw new Error("You must be logged in to generate rules");
@@ -47,7 +47,7 @@ export function Generate() {
         }
         throw new Error("Failed to generate rule");
       }
-
+ 
       const reader = response.body?.getReader();
       if (!reader) throw new Error("No response body");
 

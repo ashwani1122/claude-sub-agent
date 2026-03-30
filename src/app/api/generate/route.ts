@@ -1,4 +1,3 @@
-
 import { ensureUserExists } from "@/actions/user";
 import { getModel, SYSTEM_PROMPT } from "@/lib/ai";
 import { checkRateLimit } from "@/lib/rate-limit";
@@ -7,14 +6,11 @@ import { streamText } from "ai";
 
 export async function POST(req: Request) {
   const supabase = await createClient();
-
-  console.log(supabase);
   const {
     data: { user },
   } = await supabase.auth.getUser();
-
-  console.log(user)
-
+  console.log(`this is the user ${user}`);
+  console.log(`the user is ${user?.email} ${user?.email} ${user?.email} ${user?.action_link}`);
   if (!user) {
     return new Response("Unauthorized", { status: 401 });
   }
