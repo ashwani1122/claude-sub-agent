@@ -25,7 +25,6 @@ const primaryLinks = [
 const moreLinks = [
   { href: "/learn", label: "Learn" },
   { href: "/about", label: "About" },
-  { href: "/advertise", label: "Advertise" },
 ] as const;
 
 export function Header() {
