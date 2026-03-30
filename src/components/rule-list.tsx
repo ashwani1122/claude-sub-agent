@@ -5,7 +5,6 @@ import { AdCardSmall } from "@/components/ad-card-small";
 import { RuleCard } from "@/components/rule-card";
 import { RuleCardSmall } from "@/components/rule-card-small";
 import { Button } from "@/components/ui/button";
-import { ads } from "@/data/ads";
 import { sections as staticSections } from "@/data/rules/client";
 import type { Section } from "@/data/rules/types";
 import { useQueryState } from "nuqs";
@@ -37,19 +36,6 @@ export function RuleList({
   useEffect(() => {
     sectionsRef.current = sections;
   }, [sections]);
-
-  const randomAds = useMemo(() => {
-    const adsMap: Record<string, (typeof ads)[0]> = {};
-    sections.forEach((section, sectionIndex) => {
-      section.rules.forEach((_, ruleIndex) => {
-        const position = `${sectionIndex}-${ruleIndex}`;
-        const hash = (sectionIndex * 31 + ruleIndex * 17) % ads.length;
-        adsMap[position] = ads[hash];
-      });
-    });
-    return adsMap;
-  }, [sections]);
-
   const filteredSections = useMemo(() => {
     const searchLower = search?.toLowerCase() || "";
     return sections
@@ -163,13 +149,7 @@ export function RuleList({
     };
   }, [handleScroll]);
 
-  const getRandomAd = useCallback(
-    (sectionIndex: number, ruleIndex: number) => {
-      const position = `${sectionIndex}-${ruleIndex}`;
-      return randomAds[position] || ads[0];
-    },
-    [randomAds],
-  );
+ 
 
   let totalItemsCount = 0;
 
@@ -214,14 +194,12 @@ export function RuleList({
                   {small ? (
                     <>
                       <RuleCardSmall rule={rule} small />
-                      {isMounted && shouldShowAd && (
-                        <AdCardSmall ad={getRandomAd(idx, idx2)} small />
-                      )}
+                     
                     </>
                   ) : (
                     <>
                       <RuleCard rule={rule} />
-                      {isMounted && shouldShowAd && <AdCard ad={getRandomAd(idx, idx2)} />}
+                      
                     </>
                   )}
                 </Fragment>
