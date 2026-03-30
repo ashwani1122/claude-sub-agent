@@ -1,7 +1,4 @@
 "use client";
-
-import { AdCard } from "@/components/ad-card";
-import { AdCardSmall } from "@/components/ad-card-small";
 import { RuleCard } from "@/components/rule-card";
 import { RuleCardSmall } from "@/components/rule-card-small";
 import { Button } from "@/components/ui/button";
