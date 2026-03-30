@@ -1,7 +1,7 @@
 import { cleanDescription } from "@/lib/utils";
 import type { Rule } from "@/data/rules/types";
 
-const BASE_URL = "https://sub-agents.directory";
+const BASE_URL = "https://claude-sub-agent.vercel.app/";
 
 interface WebSiteSchemaProps {
   name?: string;

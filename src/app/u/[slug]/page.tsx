@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
     openGraph: {
       title: `${name}'s Profile | Sub-Agents Directory`,
       description: `View ${name}'s generated Claude Code sub-agent prompts.`,
-      url: `https://sub-agents.directory/u/${slug}`,
+      url: `https://claude-sub-agent.vercel.app/u/${slug}`,
     },
   };
 }

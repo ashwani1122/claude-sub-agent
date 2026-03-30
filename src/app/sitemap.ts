@@ -2,7 +2,7 @@ import { getSections } from "@/data/rules";
 import type { MetadataRoute } from "next";
 import slugify from "slugify";
 
-const BASE_URL = "https://sub-agents.directory";
+const BASE_URL = "https://claude-sub-agent.vercel.app/";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const sections = getSections();

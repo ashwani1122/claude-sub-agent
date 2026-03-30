@@ -18,7 +18,7 @@ const fraunces = Fraunces({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://sub-agents.directory"),
+  metadataBase: new URL("https://claude-sub-agent.vercel.app/"),
   title: {
     default: "Sub-Agents Directory",
     template: "%s | Sub-Agents Directory",
@@ -62,7 +62,7 @@ export const metadata: Metadata = {
     title: "Sub-Agents Directory - Claude Code Prompts & MCP Servers",
     description:
       "Browse 200+ Claude Code sub-agent prompts and MCP servers. Copy-paste ready prompts for React, Python, TypeScript, and more.",
-    url: "https://sub-agents.directory",
+    url: "https://claude-sub-agent.vercel.app/",
     siteName: "Sub-Agents Directory",
     locale: "en_US",
     type: "website",

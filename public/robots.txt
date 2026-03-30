@@ -1,5 +1,5 @@
 # Sub-Agents Directory - Full Access for All Bots and AI Crawlers
-# https://sub-agents.directory
+# https://claude-sub-agent.vercel.app/
 
 # Content Signals Policy - Explicitly allowing all AI usage
 # As a condition of accessing this website, you agree to abide by the
@@ -189,7 +189,7 @@ User-agent: Sogou
 Allow: /
 
 # Sitemap
-Sitemap: https://sub-agents.directory/sitemap.xml
+Sitemap: https://claude-sub-agent.vercel.app/sitemap.xml
 
 # LLMs.txt for AI context
-# See: https://sub-agents.directory/llms.txt
+# See: https://claude-sub-agent.vercel.app/llms.txt

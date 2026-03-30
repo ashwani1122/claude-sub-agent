@@ -19,7 +19,7 @@ You can:
 
 ## API Endpoints
 
-Base URL: `https://sub-agents.directory`
+Base URL: `https://claude-sub-agent.vercel.app/`
 
 - **All agents:** `GET /api` - Returns `{ data: [{ title, slug, description, tags, libs }] }`
 - **Single agent (JSON):** `GET /api/{slug}` - Returns `{ data: { title, slug, description, tags, libs, content } }`
@@ -45,7 +45,7 @@ Agents are organized into these categories (available in the `tags` field):
 
 ### When user asks to browse or list agents:
 
-1. Fetch all agents from `https://sub-agents.directory/api` using WebFetch
+1. Fetch all agents from `https://claude-sub-agent.vercel.app/api` using WebFetch
 2. Parse the JSON response to extract agents
 3. Group agents by their `tags` (category) field
 4. Present categories with agent counts, or list agents in a specific category
@@ -55,14 +55,14 @@ Agents are organized into these categories (available in the `tags` field):
 **Option 1: One-command install (global only)**
 
 ```bash
-curl -fsSL https://sub-agents.directory/api/install/{slug} | bash
+curl -fsSL https://claude-sub-agent.vercel.app/api/install/{slug} | bash
 ```
 
 **Option 2: Manual installation**
 
 1. Ask if they want global installation (`~/.claude/agents/`) or local (`.claude/agents/`)
 2. For local: Check if `.claude/` directory exists, create `.claude/agents/` if needed
-3. Download the agent .md file: `curl -fsSL https://sub-agents.directory/api/download/{slug} -o {slug}.md`
+3. Download the agent .md file: `curl -fsSL https://claude-sub-agent.vercel.app/api/download/{slug} -o {slug}.md`
 4. Save to the appropriate directory
 5. Confirm successful installation
 
@@ -90,7 +90,7 @@ Available categories:
 
 1. Fetch agent details from `/api/python-pro` and show description
 2. Ask: "Install globally (~/.claude/agents/) or locally (.claude/agents/)?"
-3. For global, can use: `curl -fsSL https://sub-agents.directory/api/install/python-pro | bash`
+3. For global, can use: `curl -fsSL https://claude-sub-agent.vercel.app/api/install/python-pro | bash`
 4. Confirm: "✓ Installed python-pro.md to ~/.claude/agents/"
 
 **User:** "Search for typescript"

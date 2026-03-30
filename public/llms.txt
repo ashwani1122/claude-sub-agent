@@ -13,11 +13,11 @@ Sub-Agents Directory is the go-to resource for developers using Claude Code. We 
 
 ## Main Sections
 
-- [Home](https://sub-agents.directory/): Browse all rules and prompts
-- [Rules](https://sub-agents.directory/rules): Complete rules directory
-- [MCP Servers](https://sub-agents.directory/mcp): MCP server integrations
-- [Learn](https://sub-agents.directory/learn): Video tutorials and guides
-- [About](https://sub-agents.directory/about): About the project
+- [Home](https://claude-sub-agent.vercel.app/): Browse all rules and prompts
+- [Rules](https://claude-sub-agent.vercel.app/rules): Complete rules directory
+- [MCP Servers](https://claude-sub-agent.vercel.app/mcp): MCP server integrations
+- [Learn](https://claude-sub-agent.vercel.app/learn): Video tutorials and guides
+- [About](https://claude-sub-agent.vercel.app/about): About the project
 
 ## Technical Details
 
@@ -32,10 +32,10 @@ This website welcomes all AI crawlers and bots. All content is freely accessible
 
 ## Contact
 
-- Website: https://sub-agents.directory
+- Website: https://claude-sub-agent.vercel.app/
 - GitHub: https://github.com/sub-agents-directory
 
 ## Optional
 
-- Sitemap: https://sub-agents.directory/sitemap.xml
-- Robots.txt: https://sub-agents.directory/robots.txt
+- Sitemap: https://claude-sub-agent.vercel.app/sitemap.xml
+- Robots.txt: https://claude-sub-agent.vercel.app/robots.txt

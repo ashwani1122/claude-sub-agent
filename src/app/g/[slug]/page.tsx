@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
     openGraph: {
       title: `${title} | Sub-Agents Directory`,
       description,
-      url: `https://sub-agents.directory/g/${slug}`,
+      url: `https://claude-sub-agent.vercel.app/g/${slug}`,
     },
     twitter: {
       card: "summary_large_image",
