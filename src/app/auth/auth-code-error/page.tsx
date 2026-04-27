@@ -11,7 +11,9 @@ export default async function AuthCodeErrorPage({
 }: {
   searchParams: Promise<{ error?: string }>;
 }) {
+  console.log(`this is search params ${((await searchParams).error)}`)
   const { error } = await searchParams;
+   console.log(error)
 
   return (
     <div className="min-h-screen flex items-center justify-center px-4">

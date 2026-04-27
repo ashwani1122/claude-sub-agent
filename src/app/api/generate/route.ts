@@ -9,6 +9,8 @@ export async function POST(req: Request) {
   const {
     data: { user },
   } = await supabase.auth.getUser();
+
+  console.log(`this is the user from the ${user}`)
   console.log(`this is the user ${user}`);
   console.log(`the user is ${user?.email} ${user?.email} ${user?.email} ${user?.action_link}`);
   if (!user) {
