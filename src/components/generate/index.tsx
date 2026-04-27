@@ -36,7 +36,6 @@ export function Generate() {
         body: JSON.stringify({ input }),
       });
     console.log(response)
-    alert(response.body)
       if (!response.ok) {
         if (response.status === 401) {
           throw new Error("You must be logged in to generate rules");
